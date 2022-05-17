@@ -1,1 +1,6 @@
-
+FROM node:14-alpine
+WORKDIR /app
+EXPOSE 3000
+ENV REACT_APP_API_HOST=localhost REACT_APP_API_PORT=3001
+COPY . .
+ENTRYPOINT [ "npm", "start" ]
